@@ -6,4 +6,4 @@ longestWord s = let wordls = words s
                     strLength (x:xs) =  (length x):strLength xs
                 in snd $ maximum $ [(length word,word)|word <- wordls]
 
-main = print $ longestWord "This is programming in Julia" 
+main = print $ longestWord "This is programming in Haskell" 
