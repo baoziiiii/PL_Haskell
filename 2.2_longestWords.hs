@@ -1,9 +1,9 @@
 longestWords :: String-> [String]
 longestWords "" = []
 longestWords s = let wordls = words s
-                     strLength :: [String] -> [Int] 
-                     strLength []=[]
-                     strLength (x:xs) =  (length x):strLength xs
+                     wordLength :: [String] -> [Int] 
+                     wordLength []=[]
+                     wordLength (x:xs) =  (length x):wordLength xs
                      maxLength = fst $ maximum $ [(length word,word)|word <- wordls]
                  in [ word | word<-wordls , length word == maxLength]
 
